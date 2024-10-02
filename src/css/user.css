@@ -33,13 +33,42 @@
 /* 회원가입 */
 #user #joinForm {
 	text-align: center;
+	margin-top: 30px;
 }
 
 #user #joinForm .form-group {
-	margin: 10px 5px 10px 5px;
+	margin: 30px 5px 10px 5px;
 }
 
+/* #user #joinForm .form-group .check {
+	
+} */
 
+#user #joinForm input {
+	width: 300px;
+	height: 40px;
+	font-size: 20px;
+}
+
+#user #joinForm .form-group #tel-txt{
+	width: 300px;
+	line-height: 1.5; /* 원하는 줄간격으로 조절 */
+}
+
+/* margin-left: 30%;
+margin-top: 10px;
+font-size: 11px;
+text-align: left; */
+
+#user #joinForm .form-group #chk-agree {
+	margin: 0px 10px 10px 35px ;
+	font-size: 0px;
+	width: 20px;
+}
+
+#user #joinForm .form-group label {
+
+}
 
 
 /****************************************************************/

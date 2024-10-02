@@ -6,6 +6,7 @@ import React from 'react';
 
 //import 컴포넌트
 import Header from '../include/Header';
+import Footer from '../include/Footer';
 
 //import css
 import '../../css/user.css';
@@ -26,10 +27,10 @@ const JoinForm = () => {
 
     return (
         <>
-            <div id="wrap">
+            <Header />
+            {/* // header */}
 
-                <Header />
-                {/* // header */}
+            <div id="wrap">
 
                 <div id="container">
                     
@@ -46,11 +47,47 @@ const JoinForm = () => {
                             {/* // content-head */}
 
                             <div id="joinForm">
-                                <form action='' method=''>
+                                <form action='' method='' onSubmit=''>
 
                                     {/* 아이디 */}
-                                    <div className='form-group'>
+                                    <div className='form-group' >
                                         <input type='text' id='' name='' value='' onChange='' placeholder='아이디' />
+                                        {/* <button type='button' name='check' onClick='' >중복체크</button> */}
+                                    </div>
+
+                                    {/* 비밀번호 */}
+                                    <div className='form-group'>
+                                        <input type='password' id='' name='input-pw' value='' onChange='' placeholder='암호' />
+                                        <br /><br />
+                                        <input type='password' id='' name='input-pw' value='' onChange='' placeholder='암호 확인' />
+                                    </div>
+
+                                    {/* 이름 */}
+                                    <div className='form-group'>
+                                        <input type='text' id='' name='' value='' onChange='' placeholder='이름' />
+                                    </div>
+                                    
+                                    {/* 전화번호 */}
+                                    <div className='form-group'>
+                                        <input type='text' id='' name='' value='' onChange='' placeholder='전화번호' />
+                                        <div id='tel-txt'>
+                                        항상 사용할 수 있는 전화번호를 입력하십시오. 새 기기나 웹 브라우저에 로그인할 때
+                                        <br />해당 전화번호를 사용하여 신원을 확인합니다. 메시지 또는 데이터 요금이 적용될 수
+                                        <br />있습니다.
+                                        </div>
+                                    </div>
+                                    
+                                    {/* 주소 */}
+                                    <div className='form-group'>
+                                        <input type='text' id='' name='' value='' onChange='' placeholder='주소' />
+                                    </div>
+
+                                    {/* <!-- 약관동의 --> */}
+                                    <div className="form-group">
+                                        <input type="checkbox" id="chk-agree" value="" name="" />
+                                        <label htmlFor="chk-agree">Apple의 개인정보 처리방침새 윈도우에서 열림에 따라 개인 정보를 수집,
+                                            사용, 타사에 대한 <br /> 제공 및 처리하는 데 동의합니다.
+                                        </label> 
                                     </div>
 
                                 </form>
@@ -69,6 +106,9 @@ const JoinForm = () => {
 
             </div>
             {/* // wrap */}
+
+            <Footer />
+            {/* // Footer */}
         </>
     );
 }

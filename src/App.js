@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import JoinForm from './pages/user/JoinForm';
 
-import JoinForm from './pages/user/JoinForm';
+// css
+import './css/Reset.css';
 
 function App() {
 	return (
