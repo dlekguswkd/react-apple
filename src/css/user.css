@@ -3,82 +3,391 @@
 /* 회원 입력폼 공통 ***************************************************/
 /****************************************************************/
 
-/* 회원가입 폼요소그룹(라벨+폼요소) */
-/* #user .form-group {
-	padding: 10px 5px 10px 5px;
-    text-align: left;
-} */
+.link {
+    color: black; /* 기본 링크 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+}
 
-/* 폼태그 라벨 */
-/* #user .form-group .form-text {
-    display: inline-block;  인라인 요소 가로폭을 주려고 
-    width: 150px;
-    text-align: right;
-    margin-right: 20px;
-} */
+.link:visited {
+    color: black;; /* 방문한 링크 색상을 기본 색상과 동일하게 설정 */
+}
+
+.link:hover {
+    color: #0071e3;
+}
 
 /****************************************************************/
 /* 회원가입폼 ***************************************************/
 /****************************************************************/
+#user {
+    max-width: 600px;
+    margin: 0 auto; /* 자동 마진으로 수평 중앙 정렬 */
+}
 
 /* 회원가입 맨위 */
-#user #content-head h1{
-	text-align: center;
+#user #content-head {
+
+    text-align: center;
 }
 
+#user #content-head h1,
 #user #content-head #intro-text {
-	text-align: center;
+    white-space: nowrap; /* 줄바꿈 방지 */
 }
+
 
 /* 회원가입 */
 #user #joinForm {
-	text-align: center;
-	margin-top: 30px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 500px; /* 최소 왼쪽 마진 */
+    margin-right: 300px; /* 최소 오른쪽 마진 */
+    box-sizing: border-box; /* 패딩을 포함하여 너비 계산 */
+    margin: 0 auto; /* 자동 마진으로 수평 중앙 정렬 */
 }
 
 #user #joinForm .form-group {
-	margin: 30px 5px 10px 5px;
+    width: 480px; /* 고정 너비 설정 */
+    margin: 30px auto; /* 위아래 마진 조정 및 수평 중앙 정렬 */
+    display: block; /* 블록으로 설정하여 세로로 쌓이도록 */
 }
-
-/* #user #joinForm .form-group .check {
-	
-} */
 
 #user #joinForm input {
-	width: 300px;
-	height: 40px;
-	font-size: 20px;
+    width: 100%; /* 입력 필드 너비를 부모 요소에 맞춤 */
+    height: 40px;
+    font-size: 20px;
+    border-radius: 6px;
+    padding-left: 10px; /* 약간의 패딩 추가 */
 }
 
-#user #joinForm .form-group #tel-txt{
-	width: 300px;
-	line-height: 1.5; /* 원하는 줄간격으로 조절 */
+/* 전화번호 안내 텍스트 */
+#user #joinForm .form-group #tel-txt {
+    font-size: 12px;
+    line-height: 1.5; /* 원하는 줄간격으로 조절 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    margin-top: 10px;
 }
 
-/* margin-left: 30%;
-margin-top: 10px;
-font-size: 11px;
-text-align: left; */
+/* 약관 동의 체크박스 */
+#user #joinForm .form-group:nth-of-type(6) {
+    display: flex; /* flexbox로 설정 */
+    align-items: center; /* 수직 중앙 정렬 */
+}
 
 #user #joinForm .form-group #chk-agree {
-	margin: 0px 10px 10px 35px ;
-	font-size: 0px;
-	width: 20px;
+    width: auto; /* 체크박스 너비 자동 */
+    height: 30px; /* 체크박스 높이 */
+    margin-right: 10px;
 }
 
 #user #joinForm .form-group label {
+    font-size: 14px; /* 레이블의 글자 크기 */
+    text-align: left;
+    white-space: nowrap; /* 줄바꿈 방지 */
+    flex-grow: 1; /* 레이블이 가능한 공간을 채우도록 설정 */
+}
 
+#user #joinForm .form-group:nth-of-type(7) {
+    width: calc(100% - 600px); /* 전체 너비에서 최소 마진(300px * 2) 제거 */
+    position: relative; /* 부모 요소를 상대 위치로 설정 */
+    height: 40px; /* 원하는 높이 설정 */
+    display: flex; /* Flexbox로 설정 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    margin: 30px 0; /* 위아래 마진 조정 */
+    padding-left: 270px; /* 왼쪽 패딩 추가 */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#user #joinForm .form-group #join-png {
+    width: 35px;
+    height: 28px;
+    margin: 0 auto; /* 자동 마진으로 수평 중앙 정렬 */
+    padding-left: 50px;
+}
+
+#user #joinForm .form-group #join-txt {
+    font-size: 10px;
+    max-width: 480px; /* 텍스트의 최대 너비 설정 */
+    line-height: 1.5; /* 원하는 줄간격으로 조절 */
+    text-align: center; /* 텍스트 왼쪽 정렬 */
+    margin: 0 auto; /* 중앙 정렬 */
+}
+
+
+#user #joinForm .form-group:nth-of-type(8) {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#user #joinForm .form-group #btn-submit {
+    width: 100px;
+    background-color: #0071e3;
+    color: white;
+    height: 37px;
+    border-radius: 5px;
+    cursor: pointer; /* 마우스 포인터 변경 */
+    border: none; /* 테두리 제거 */ 
+}
+#user #joinForm .form-group #btn-submit:hover {
+    background-color: #005bb5;
 }
 
 
 /****************************************************************/
 /* 로그인폼 ***************************************************/
 /****************************************************************/
+/* joinform 사용했음 */
 
-
-
+#user #joinForm .form-group #loginform {
+    margin-bottom: 300px;
+    display: block; /* 블록으로 설정하여 세로로 쌓이도록 */
+}
 
 
 /****************************************************************/
-/* 회원정보 수정폼 **********************************************/
+/* 마이페이지폼 **********************************************/
 /****************************************************************/
+/* 왼쪽메뉴(aside) */
+#container > #mypage {
+    display: flex; /* Flexbox로 설정 */
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    background-color: #fdfdfd;
+    width: 1200px;
+    margin: 50px 0px 50px 480px;
+}
+
+
+#aside {
+    float: left; 
+    width: 120px; 
+    margin: 50px 0px 0px 0px; 
+    display: block;
+    padding-left: 50px;
+}
+
+#aside .aside-txt {
+    margin-top: 10px;
+}
+
+#aside .aside-txt span:nth-of-type(1) {
+    margin-left: 10px;
+    display: block;
+    padding-top: 7px; 
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#aside .aside-txt span:nth-of-type(2) {
+    margin-left: 10px;
+    display: block;
+    padding-top: 7px; 
+    font-size: 20px;
+}
+
+#aside ul {
+    width: 140px;
+    padding-left: 0px;
+    margin-top: 70px;
+}
+
+#aside ul>li button {
+    font-weight: 250;
+    margin: 0px; 
+    padding: 0px;
+    font-size: 18px; 
+    text-align: left; 
+    border: none;
+    background-color: #fdfdfd;
+    cursor: pointer;
+}
+#aside ul>li button:hover {
+    color: #0071e3;
+}
+
+#aside ul>li {
+    font-weight: 250;
+    margin: 5px 0px 0px 0px; 
+    padding: 3px 0px 3px 10px; 
+    font-size: 18px; 
+    text-align: left; 
+    list-style-type: none;
+}
+
+
+
+#content-2 {
+    float: left;
+    width: 800px; 
+    min-width: 800px;
+    margin: 50px 0px 0px 70px; 
+}
+
+#content-2 h2 {
+    width: 160px; 
+    height: 25px; 
+    font-size: 20px; 
+    font-weight: bold; 
+}
+
+
+/* 섹션마다 */
+.info-section {
+    background-color: white;
+    padding: 0px 20px;
+    border: 1px solid #e0e0e0;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 230px; /* max-height 3개의 카드만 보이도록 높이 제한 */
+    overflow: hidden; /* 넘치는 부분 숨김 */
+}
+.favorite-section, .shoppingCart-section {
+    background-color: white;
+    padding: 0px 20px;
+    border: 1px solid #e0e0e0;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 310px; /* max-height 3개의 카드만 보이도록 높이 제한 */
+    overflow: hidden; /* 넘치는 부분 숨김 */
+}
+
+.info-header, .favorite-header, .shoppingCart-header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0px;
+    align-items: center;
+}
+
+.info-header #modal-btn {
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 3px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.info-status {
+	background-color: #f7f7f7;
+    padding: 5px;
+	border-radius: 7px;
+	color: #727272;
+    margin-bottom: 10px;
+}
+
+.info-status p {
+	padding: 3px;
+	font-size: 15px;
+}
+
+.favorite-products, .shoppingCart-products {
+    display: grid; /* 그리드 설정 */
+    gap: 10px; /* 간격 설정 */
+    grid-template-columns: repeat(3, 1fr); /* 3개의 컬럼 설정 */
+    height: 220px;
+    /* grid-auto-rows: auto; 자동 높이 설정 */
+}
+
+.product-info, .shoppingCart-info {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s ease;
+}
+
+.product-info img , .shoppingCart-info img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+}
+
+
+.product-details, .shoppingCart-details {
+    margin-top: 10px;
+}
+
+.product-details h4, .shoppingCart-details h4 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.product-details p, .shoppingCart-details p {
+    margin: 5px 0;
+    font-size: 12px;
+    color: #666;
+}
+
+
+.shoppingCart-section {
+    margin-bottom: 50px;
+}
+
+
+/* 모달창 */
+/* 창 떴을때 뒤에 배경 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 모달창 전체 */
+.modal-content {
+    background: white;
+    width: 600px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 모달창닫기버튼 */
+.modal-content button {
+    background-color: white;
+    border: none;
+    font-size: 25px;
+}
+
+.modal-content #modalContent {
+    text-align: center;
+}
+
+/* 사람모양사진 */
+.modal-content #modalContent img {
+    width: 50px;
+}
+
+.modal-content #modalContent p {
+    font-size: 25px;
+    margin: 0px;
+    margin-bottom: 35px;
+}
+
+.modal-content #modalContent input {
+    width: 250px;
+    height: 40px;
+    border-radius: 7px;
+    border: 1px solid black;
+}
+
+/* 수정버튼 */
+.modal-content #modalContent button {
+    width: 80px;
+    height: 30px;
+    font-size: 17px;
+    border-radius: 7px;
+    background-color: #0071e3;
+    color: white;
+}
+.modal-content #modalContent button:hover {
+    background-color: #005bb5;
+}
