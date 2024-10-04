@@ -12,8 +12,9 @@
     color: black;; /* 방문한 링크 색상을 기본 색상과 동일하게 설정 */
 }
 
-.link:hover {
+#mypage .link:hover {
     color: #0071e3;
+    text-decoration: none; /* 밑줄 제거 */
 }
 
 /****************************************************************/
@@ -156,7 +157,7 @@
     border-radius: 10px;
     background-color: #fdfdfd;
     width: 1200px;
-    margin: 50px 0px 50px 480px;
+    margin: 50px auto;
 }
 
 
@@ -193,19 +194,6 @@
     margin-top: 70px;
 }
 
-#aside ul>li button {
-    font-weight: 250;
-    margin: 0px; 
-    padding: 0px;
-    font-size: 18px; 
-    text-align: left; 
-    border: none;
-    background-color: #fdfdfd;
-    cursor: pointer;
-}
-#aside ul>li button:hover {
-    color: #0071e3;
-}
 
 #aside ul>li {
     font-weight: 250;
@@ -244,7 +232,7 @@
     height: 230px; /* max-height 3개의 카드만 보이도록 높이 제한 */
     overflow: hidden; /* 넘치는 부분 숨김 */
 }
-.favorite-section, .shoppingCart-section {
+.favorite-section, .purchaseList-section {
     background-color: white;
     padding: 0px 20px;
     border: 1px solid #e0e0e0;
@@ -255,7 +243,7 @@
     overflow: hidden; /* 넘치는 부분 숨김 */
 }
 
-.info-header, .favorite-header, .shoppingCart-header {
+.info-header, .favorite-header, .purchaseList-header {
     display: flex;
     justify-content: space-between;
     padding-top: 0px;
@@ -263,11 +251,14 @@
 }
 
 .info-header #modal-btn {
-    border: 1px solid lightgray;
+    border: none;
     background-color: white;
-    border-radius: 3px;
     font-size: 17px;
     cursor: pointer;
+}
+
+.info-header #modal-btn:hover {
+    color: #0071e3;
 }
 
 .info-status {
@@ -283,7 +274,7 @@
 	font-size: 15px;
 }
 
-.favorite-products, .shoppingCart-products {
+.favorite-products, .purchaseList-products {
     display: grid; /* 그리드 설정 */
     gap: 10px; /* 간격 설정 */
     grid-template-columns: repeat(3, 1fr); /* 3개의 컬럼 설정 */
@@ -291,7 +282,7 @@
     /* grid-auto-rows: auto; 자동 높이 설정 */
 }
 
-.product-info, .shoppingCart-info {
+.product-info, .purchaseList-info {
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     padding: 10px;
@@ -299,30 +290,30 @@
     transition: box-shadow 0.3s ease;
 }
 
-.product-info img , .shoppingCart-info img {
+.product-info img , .purchaseList-info img {
     width: 100%;
     height: 150px;
     border-radius: 10px;
 }
 
 
-.product-details, .shoppingCart-details {
+.product-details, .purchaseList-details {
     margin-top: 10px;
 }
 
-.product-details h4, .shoppingCart-details h4 {
+.product-details h4, .purchaseList-details h4 {
     margin: 0;
     font-size: 14px;
 }
 
-.product-details p, .shoppingCart-details p {
+.product-details p, .purchaseList-details p {
     margin: 5px 0;
     font-size: 12px;
     color: #666;
 }
 
 
-.shoppingCart-section {
+.purchaseList-section {
     margin-bottom: 50px;
 }
 
@@ -390,4 +381,93 @@
 }
 .modal-content #modalContent button:hover {
     background-color: #005bb5;
+}
+
+
+/****************************************************************/
+/* 구매내역폼 **********************************************/
+/****************************************************************/
+/* 구매물품없을때 */
+#content-3 {
+    float: left;
+    width: 800px; 
+    min-width: 800px;
+    margin: 50px 0px 0px 70px; 
+}
+
+#content-3 h2 {
+    width: 160px; 
+    height: 25px; 
+    font-size: 20px; 
+    font-weight: bold; 
+}
+
+#content-3 #buy-none {
+    margin-top: 110px;
+    margin-bottom: 250px;
+}
+
+#content-3 #buy-none p {
+    line-height: 1.5;
+}
+
+#content-3 #buy-none p .buyLink {
+    color: #0071e3;
+    text-decoration: none;
+}
+
+#content-3 #buy-none p .buyLink:visited {
+    color: #0071e3;
+    text-decoration: none;
+}
+
+#content-3 #buy-none p .buyLink:hover {
+    color: #015ebb;
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+
+/* 구매물품있을때 */
+.purchaseList {
+    background-color: white;
+    padding: 0px 20px;
+    border: 1px solid #e0e0e0;
+    margin-top: 100px;
+    border-radius: 10px;
+}
+
+.purchaseList .products {
+    padding-left: 20px;
+}
+
+.purchaseList .products .clearfix {
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.purchaseList .products .clearfix img {
+    float: left;
+    margin: 20px 0px 20px 20px;
+    width: 200px;
+    height: 200px;
+}
+
+.purchaseList .products .clearfix .details {
+    float: left;
+    margin-top: 40px;
+    margin-left: 90px;
+}
+
+.purchaseList .clearfix .details p {
+    margin: 5px 0;
+    font-size: 20px;
+    color: #666;
 }

@@ -42,9 +42,9 @@ const Mypage = () => {
                                 <span>유저이름</span>
                                 <span>유저아이디</span>
                                 <ul>
-                                    <li><button id="modal-btn" type='button' onClick={openModal}>개인정보</button></li>
+                                    <li><Link to='' className="link" rel="noreferrer noopener">개인정보</Link></li>
                                     <li><Link to='' className="link" rel="noreferrer noopener">관심상품</Link></li>
-                                    <li><Link to='' className="link" rel="noreferrer noopener">장바구니</Link></li>
+                                    <li><Link to='/user/purchaselist' className="link" rel="noreferrer noopener">구매내역</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -94,32 +94,32 @@ const Mypage = () => {
                             </div>
                             {/* // favorite-section */}
 
-                            <div className="shoppingCart-section">
-                                <div className="shoppingCart-header">
-                                    <h3>장바구니</h3>
-                                    <Link to='' className="link" rel="noreferrer noopener">더보기</Link>
+                            <div className="purchaseList-section">
+                                <div className="purchaseList-header">
+                                    <h3>구매내역</h3>
+                                    <Link to='/user/purchaselist' className="link" rel="noreferrer noopener">더보기</Link>
                                 </div>
-                                <div class="shoppingCart-products">
+                                <div className="purchaseList-products">
                                     {/* <form action="" method="" onSubmit=""> */}
-                                        <div class="shoppingCart-info">
+                                        <div className="purchaseList-info">
                                             <img src="../images/USB.png" alt="상품사진" />
-                                            <div class="shoppingCart-details">
+                                            <div className="purchaseList-details">
                                                 <h4>USB-C 전원 어댑터</h4>
                                                 <p>28,000</p>
                                             </div>
                                         </div>
-                                        <div class="shoppingCart-info">
+                                        <div className="purchaseList-info">
                                             <img src="../images/case.png" alt="상품사진" />
-                                            <div class="shoppingCart-details">
+                                            <div className="purchaseList-details">
                                                 <h4>실리콘 케이스</h4>
                                                 <p>69,000</p>
                                             </div>
                                         </div>
                                     {/* </form> */}
                                 </div>
-                                {/* // shoppingCart-products */}
+                                {/* // purchaseList-products */}
                             </div>
-                            {/* // shoppingCart-section */}
+                            {/* // purchaseList-section */}
 
                             <Modal isOpen={isModalOpen} onClose={closeModal}>
                                 <div id='modalContent'>
