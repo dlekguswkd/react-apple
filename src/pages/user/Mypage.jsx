@@ -8,24 +8,21 @@ import Header from '../include/Header';
 import Footer from '../include/Footer';
 import Modal from './UserInfo-Modal';
 
-
 //import css
 import '../../css/user.css';
 
-
 const Mypage = () => {
 
-	/*---일반 변수 --------------------------------------------*/
+    /*---일반 변수 --------------------------------------------*/
 
-	/*---상태관리 변수들(값이 변화면 화면 랜더링) ----------*/
+    /*---상태관리 변수들(값이 변화면 화면 랜더링) ----------*/
     const [isModalOpen, setIsModalOpen] = useState(false); // 모달 상태 관리
 
-	/*---일반 메소드 -----------------------------------------*/
+    /*---일반 메소드 -----------------------------------------*/
 
-	/*---생명주기 + 이벤트 관련 메소드 ----------------------*/
+    /*---생명주기 + 이벤트 관련 메소드 ----------------------*/
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
-
 
     return (
         <>
@@ -38,13 +35,13 @@ const Mypage = () => {
                     <div id='mypage'>
 
                         <div id="aside">
-                            <div className="aside-txt">
+                            <div className="DA-aside-txt">
                                 <span>유저이름</span>
                                 <span>유저아이디</span>
                                 <ul>
-                                    <li><Link to='' className="link" rel="noreferrer noopener">개인정보</Link></li>
-                                    <li><Link to='' className="link" rel="noreferrer noopener">관심상품</Link></li>
-                                    <li><Link to='/user/purchaselist' className="link" rel="noreferrer noopener">구매내역</Link></li>
+                                    <li><Link to='/user/mypage' className="DA-link" rel="noreferrer noopener">개인정보</Link></li>
+                                    <li><Link to='' className="DA-link" rel="noreferrer noopener">관심상품</Link></li>
+                                    <li><Link to='/user/purchaselist' className="DA-link" rel="noreferrer noopener">구매내역</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -55,12 +52,12 @@ const Mypage = () => {
                             <span id="mypage-txt">개인 정보를 관리하십시오.</span>
                             <br /><br />
 
-                            <div className="info-section">
-                                <div className="info-header">
+                            <div className="DA-info-section">
+                                <div className="DA-info-header">
                                     <h3>정보 수정</h3>
-                                    <button id="modal-btn" type='button' onClick={openModal}>수정</button>
+                                    <button id="DA-modal-btn" type='button' onClick={openModal}>수정</button>
                                 </div>
-                                <div className="info-status">
+                                <div className="DA-info-status">
                                     <p>이  름 : userName</p>
                                     <p>전화번호 : userPhone</p>
                                     <p>주 소 : userAddress</p>
@@ -68,23 +65,23 @@ const Mypage = () => {
                             </div>
                             {/* // info-section */}
 
-                            <div className="favorite-section">
-                                <div className="favorite-header">
+                            <div className="DA-favorite-section">
+                                <div className="DA-favorite-header">
                                     <h3>관심 상품</h3>
-                                    <Link to='' className="link" rel="noreferrer noopener">더보기</Link>
+                                    <Link to='' className="DA-link" rel="noreferrer noopener">더보기</Link>
                                 </div>
-                                <div className="favorite-products">
+                                <div className="DA-favorite-products">
                                     {/* <form action="" method="" onSubmit=""> */}
-                                        <div className="product-info">
+                                        <div className="DA-product-info">
                                             <img src="../images/USB.png" alt="상품사진" />
-                                            <div className="product-details">
+                                            <div className="DA-product-details">
                                                 <h4>USB-C 전원 어댑터</h4>
                                                 <p>28,000</p>
                                             </div>
                                         </div>
-                                        <div className="product-info">
+                                        <div className="DA-product-info">
                                             <img src="../images/case.png" alt="상품사진" />
-                                            <div className="product-details">
+                                            <div className="DA-product-details">
                                                 <h4>실리콘 케이스</h4>
                                                 <p>69,000</p>
                                             </div>
@@ -94,23 +91,23 @@ const Mypage = () => {
                             </div>
                             {/* // favorite-section */}
 
-                            <div className="purchaseList-section">
-                                <div className="purchaseList-header">
+                            <div className="DA-purchaseList-section">
+                                <div className="DA-purchaseList-header">
                                     <h3>구매내역</h3>
-                                    <Link to='/user/purchaselist' className="link" rel="noreferrer noopener">더보기</Link>
+                                    <Link to='/user/purchaselist' className="DA-link" rel="noreferrer noopener">더보기</Link>
                                 </div>
-                                <div className="purchaseList-products">
+                                <div className="DA-purchaseList-products">
                                     {/* <form action="" method="" onSubmit=""> */}
-                                        <div className="purchaseList-info">
+                                        <div className="DA-purchaseList-info">
                                             <img src="../images/USB.png" alt="상품사진" />
-                                            <div className="purchaseList-details">
+                                            <div className="DA-purchaseList-details">
                                                 <h4>USB-C 전원 어댑터</h4>
                                                 <p>28,000</p>
                                             </div>
                                         </div>
-                                        <div className="purchaseList-info">
+                                        <div className="DA-purchaseList-info">
                                             <img src="../images/case.png" alt="상품사진" />
-                                            <div className="purchaseList-details">
+                                            <div className="DA-purchaseList-details">
                                                 <h4>실리콘 케이스</h4>
                                                 <p>69,000</p>
                                             </div>
@@ -122,7 +119,7 @@ const Mypage = () => {
                             {/* // purchaseList-section */}
 
                             <Modal isOpen={isModalOpen} onClose={closeModal}>
-                                <div id='modalContent'>
+                                <div id='DA-modalContent'>
                                     <img src="../images/userInfo.png" alt="사람모양사진" />
                                     <p>개인 정보 수정</p>
                                     <input type='password' id='' name='input-pw' value='' onChange='' placeholder='암호' />
@@ -144,14 +141,12 @@ const Mypage = () => {
                 </div>
                 {/* <!-- //container  --> */}
 
-
                 {/* <!-- footer import -->  */}
                     <Footer />
                 {/* <!-- //footer -->  */}
 
             </div>
             {/* <!-- //wrap --> */}
-
 
         </>
     );

@@ -1,26 +1,19 @@
-//import 라이브러리
-import React, {useState} from 'react';
+// import 라이브러리
+import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';	링크걸기
 // import { useSearchParams} from 'react-router-dom';	파라미터값사용하는 라우터
 
-//import 컴포넌트
-
-//import css
+// import css
 import '../../css/community.css';
-
 
 const ItemComment = ({ onSubmit, onCancel }) => {
 
-	/*---일반 변수 --------------------------------------------*/
-
-	/*---라우터 관련------------------------------------------*/
-
-	/*---상태관리 변수들(값이 변화면 화면 랜더링) ----------*/
+    /*---상태관리 변수들(값이 변화면 화면 랜더링) ----------*/
     const [comment, setComment] = useState('');
 
-	/*---일반 메소드 -----------------------------------------*/
+    /*---일반 메소드 -----------------------------------------*/
 
-	/*---생명주기 + 이벤트 관련 메소드 ----------------------*/
+    /*---생명주기 + 이벤트 관련 메소드 ----------------------*/
     const handleComment = (e) => {
         setComment(e.target.value);
     };
@@ -42,13 +35,12 @@ const ItemComment = ({ onSubmit, onCancel }) => {
     return (
         <>
             {/* 답글버튼 눌렀을때 나타날 화면 */}
-            <div className='commentClick'>
+            <div className='DA-commentClick'>
                 <textarea value={comment} onChange={handleComment} placeholder="의견을 알려 주십시오."></textarea>
                 <br />
-                <button className='commentWrite-btn' type='button' onClick={handleSubmitComment}>글쓰기</button>
-                <button className='commentCancel-btn' type='button' onClick={handleCancel}>취소</button>
+                <button className='DA-commentWrite-btn' type='button' onClick={handleSubmitComment}>글쓰기</button>
+                <button className='DA-commentCancel-btn' type='button' onClick={handleCancel}>취소</button>
             </div>
-
         </>
     );
 }

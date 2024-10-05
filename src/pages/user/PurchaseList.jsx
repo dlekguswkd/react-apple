@@ -7,22 +7,19 @@ import { Link } from 'react-router-dom';
 import Header from '../include/Header';
 import Footer from '../include/Footer';
 
-
 //import css
 import '../../css/user.css';
 
-
 const PurchaseList = () => {
 
-	/*---일반 변수 --------------------------------------------*/
+    /*---일반 변수 --------------------------------------------*/
     const buy = true; 
 
-	/*---상태관리 변수들(값이 변화면 화면 랜더링) ----------*/
+    /*---상태관리 변수들(값이 변화면 화면 랜더링) ----------*/
 
-	/*---일반 메소드 -----------------------------------------*/
+    /*---일반 메소드 -----------------------------------------*/
 
-	/*---생명주기 + 이벤트 관련 메소드 ----------------------*/
-
+    /*---생명주기 + 이벤트 관련 메소드 ----------------------*/
 
     return (
         <>
@@ -35,13 +32,13 @@ const PurchaseList = () => {
                     <div id='mypage'>
 
                         <div id="aside">
-                            <div className="aside-txt">
+                            <div className="DA-aside-txt">
                                 <span>유저이름</span>
                                 <span>유저아이디</span>
                                 <ul>
-                                    <li><Link to='/user/mypage' className="link" rel="noreferrer noopener">개인정보</Link></li>
-                                    <li><Link to='' className="link" rel="noreferrer noopener">관심상품</Link></li>
-                                    <li><Link to='/user/purchaselist' className="link" rel="noreferrer noopener">구매내역</Link></li>
+                                    <li><Link to='/user/mypage' className="DA-link" rel="noreferrer noopener">개인정보</Link></li>
+                                    <li><Link to='' className="DA-link" rel="noreferrer noopener">관심상품</Link></li>
+                                    <li><Link to='/user/purchaselist' className="DA-link" rel="noreferrer noopener">구매내역</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -49,16 +46,15 @@ const PurchaseList = () => {
 
                         <div id="content-3"> 
                             <h2>주문하신 제품.</h2>
-                            
-                            
+
                             {/* 삼항연산자 */}
                             {
-                                (buy !== true)?(   // 거짓일때
+                                (buy !== true) ? (   // 거짓일때
                                     // 구매물품이 없을때
-                                    <div id='buy-none'>
+                                    <div id='DA-buy-none'>
                                         <p>
                                             구매하신 제품이 없습니다.<br /><br /><br /><br />
-                                            주문이 보이지 않습니까? <Link to='/user/mypage' className="buyLink" rel="noreferrer noopener">지금 구매하기</Link>
+                                            주문이 보이지 않습니까? <Link to='/user/mypage' className="DA-buyLink" rel="noreferrer noopener">지금 구매하기</Link>
                                             <br /><br />
                                             현재 로그인되어 있는 계정은 userId입니다.
                                             <br /><br />
@@ -66,18 +62,18 @@ const PurchaseList = () => {
                                             <br />로그아웃했다가 그 Apple ID로 다시 로그인해보세요.
                                         </p>
                                     </div>
-                                ):(         // 참일때
+                                ) : (         // 참일때
                                     // 구매물품이 있을때
                                     <div>
-                                        <div className="purchaseList">
-                                            <div className="purchaseList-header">
+                                        <div className="DA-purchaseList">
+                                            <div className="DA-purchaseList-header">
                                                 <h3>구매 정보</h3>
                                             </div>
-                                            <div className="products">
+                                            <div className="DA-products">
 
-                                                <div className="clearfix">
+                                                <div className="DA-clearfix">
                                                     <img src="../images/USB.png" alt="상품사진" />
-                                                    <div className="details">
+                                                    <div className="DA-details">
                                                         <p>USB-C 전원 어댑터</p>
                                                         <p>색상: ex_white</p>
                                                         <p>수량: ex_1</p>
@@ -85,9 +81,9 @@ const PurchaseList = () => {
                                                         <p>구매날짜: ex_2024-10-04</p>
                                                     </div>
                                                 </div>
-                                                <div className="clearfix">
+                                                <div className="DA-clearfix">
                                                     <img src="../images/case.png" alt="상품사진" />
-                                                    <div className="details">
+                                                    <div className="DA-details">
                                                         <p>실리콘 케이스</p>
                                                         <p>색상: ex_yellow</p>
                                                         <p>수량: ex_2</p>
@@ -97,9 +93,9 @@ const PurchaseList = () => {
                                                 </div>
                                                 
                                             </div>
-                                            {/* // purchaseList-products */}
+                                            {/* // DA-purchaseList-products */}
                                         </div>
-                                        {/* // purchaseList-section */}
+                                        {/* // DA-purchaseList-section */}
                                     </div>
                                 )
                             }
@@ -111,14 +107,12 @@ const PurchaseList = () => {
                 </div>
                 {/* <!-- //container  --> */}
 
-
                 {/* <!-- footer import -->  */}
                     <Footer />
                 {/* <!-- //footer -->  */}
 
             </div>
             {/* <!-- //wrap --> */}
-
 
         </>
     );

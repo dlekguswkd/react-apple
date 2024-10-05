@@ -11,18 +11,17 @@ import Footer from '../include/Footer';
 //import css
 import '../../css/user.css';
 
-
 const LoginForm = () => {
 
-	/*---일반 변수 --------------------------------------------*/
+    /*---일반 변수 --------------------------------------------*/
 
-	/*---라우터 관련------------------------------------------*/
+    /*---라우터 관련------------------------------------------*/
 
-	/*---상태관리 변수들(값이 변화면 화면 랜더링) ----------*/
+    /*---상태관리 변수들(값이 변화면 화면 랜더링) ----------*/
 
-	/*---일반 메소드 -----------------------------------------*/
+    /*---일반 메소드 -----------------------------------------*/
 
-	/*---생명주기 + 이벤트 관련 메소드 ----------------------*/
+    /*---생명주기 + 이벤트 관련 메소드 ----------------------*/
 
 
     return (
@@ -50,25 +49,25 @@ const LoginForm = () => {
                                 <form action='' method='' onSubmit=''>
 
                                     {/* 아이디 */}
-                                    <div className='form-group' >
+                                    <div className='DA-form-group' >
                                         <input type='text' id='' name='' value='' onChange='' placeholder='아이디' />
                                         {/* <button type='button' name='check' onClick='' >중복체크</button> */}
                                     </div>
 
                                     {/* 비밀번호 */}
-                                    <div className='form-group'>
+                                    <div className='DA-form-group'>
                                         <input type='password' id='' name='input-pw' value='' onChange='' placeholder='암호' />
                                         <div id="message"></div>
                                     </div>
 
                                     {/* <!-- 버튼영역 --> */}
-                                    <div className="form-group">
+                                    <div className="DA-form-group">
                                         <button type="submit" id="btn-submit">로그인</button>
                                     </div>
                                     {/* 로그인되면 마이페이지 첫화면으로  */}
 
-                                    <div className='form-group'>
-                                        <Link to='/user/joinform' id='loginform' rel="noreferrer noopener">Apple 계정이 없습니까? 지금 만드세요.</Link>
+                                    <div className='DA-form-group'>
+                                        <Link to='/user/joinform' id='DA-link' rel="noreferrer noopener">Apple 계정이 없습니까? 지금 만드세요.</Link>
                                     </div>
                                 </form>
 

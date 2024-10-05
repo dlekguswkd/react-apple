@@ -8,7 +8,7 @@ import Comment from './pages/community/Comment';
 
 
 // css
-import './css/Reset.css';
+import './css/reset.css';
 
 function App() {
 	return (

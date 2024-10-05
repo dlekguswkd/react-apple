@@ -3,16 +3,16 @@
 /* 회원 입력폼 공통 ***************************************************/
 /****************************************************************/
 
-.link {
+.DA-link {
     color: black; /* 기본 링크 색상 */
     text-decoration: none; /* 밑줄 제거 */
 }
 
-.link:visited {
-    color: black;; /* 방문한 링크 색상을 기본 색상과 동일하게 설정 */
+.DA-link:visited {
+    color: black; /* 방문한 링크 색상을 기본 색상과 동일하게 설정 */
 }
 
-#mypage .link:hover {
+#mypage .DA-link:hover {
     color: #0071e3;
     text-decoration: none; /* 밑줄 제거 */
 }
@@ -27,7 +27,6 @@
 
 /* 회원가입 맨위 */
 #user #content-head {
-
     text-align: center;
 }
 
@@ -35,7 +34,6 @@
 #user #content-head #intro-text {
     white-space: nowrap; /* 줄바꿈 방지 */
 }
-
 
 /* 회원가입 */
 #user #joinForm {
@@ -47,7 +45,7 @@
     margin: 0 auto; /* 자동 마진으로 수평 중앙 정렬 */
 }
 
-#user #joinForm .form-group {
+#user #joinForm .DA-form-group {
     width: 480px; /* 고정 너비 설정 */
     margin: 30px auto; /* 위아래 마진 조정 및 수평 중앙 정렬 */
     display: block; /* 블록으로 설정하여 세로로 쌓이도록 */
@@ -62,7 +60,7 @@
 }
 
 /* 전화번호 안내 텍스트 */
-#user #joinForm .form-group #tel-txt {
+#user #joinForm .DA-form-group #tel-txt {
     font-size: 12px;
     line-height: 1.5; /* 원하는 줄간격으로 조절 */
     text-align: left; /* 텍스트 왼쪽 정렬 */
@@ -70,25 +68,25 @@
 }
 
 /* 약관 동의 체크박스 */
-#user #joinForm .form-group:nth-of-type(6) {
+#user #joinForm .DA-form-group:nth-of-type(6) {
     display: flex; /* flexbox로 설정 */
     align-items: center; /* 수직 중앙 정렬 */
 }
 
-#user #joinForm .form-group #chk-agree {
+#user #joinForm .DA-form-group #chk-agree {
     width: auto; /* 체크박스 너비 자동 */
     height: 30px; /* 체크박스 높이 */
     margin-right: 10px;
 }
 
-#user #joinForm .form-group label {
+#user #joinForm .DA-form-group label {
     font-size: 14px; /* 레이블의 글자 크기 */
     text-align: left;
     white-space: nowrap; /* 줄바꿈 방지 */
     flex-grow: 1; /* 레이블이 가능한 공간을 채우도록 설정 */
 }
 
-#user #joinForm .form-group:nth-of-type(7) {
+#user #joinForm .DA-form-group:nth-of-type(7) {
     width: calc(100% - 600px); /* 전체 너비에서 최소 마진(300px * 2) 제거 */
     position: relative; /* 부모 요소를 상대 위치로 설정 */
     height: 40px; /* 원하는 높이 설정 */
@@ -101,14 +99,14 @@
     padding-bottom: 0px;
 }
 
-#user #joinForm .form-group #join-png {
+#user #joinForm .DA-form-group #join-png {
     width: 35px;
     height: 28px;
     margin: 0 auto; /* 자동 마진으로 수평 중앙 정렬 */
     padding-left: 50px;
 }
 
-#user #joinForm .form-group #join-txt {
+#user #joinForm .DA-form-group #join-txt {
     font-size: 10px;
     max-width: 480px; /* 텍스트의 최대 너비 설정 */
     line-height: 1.5; /* 원하는 줄간격으로 조절 */
@@ -116,13 +114,12 @@
     margin: 0 auto; /* 중앙 정렬 */
 }
 
-
-#user #joinForm .form-group:nth-of-type(8) {
+#user #joinForm .DA-form-group:nth-of-type(8) {
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
-#user #joinForm .form-group #btn-submit {
+#user #joinForm .DA-form-group #btn-submit {
     width: 100px;
     background-color: #0071e3;
     color: white;
@@ -131,21 +128,22 @@
     cursor: pointer; /* 마우스 포인터 변경 */
     border: none; /* 테두리 제거 */ 
 }
-#user #joinForm .form-group #btn-submit:hover {
+
+#user #joinForm .DA-form-group #btn-submit:hover {
     background-color: #005bb5;
 }
-
 
 /****************************************************************/
 /* 로그인폼 ***************************************************/
 /****************************************************************/
 /* joinform 사용했음 */
 
-#user #joinForm .form-group #loginform {
+#user #joinForm .DA-form-group #DA-link {
     margin-bottom: 300px;
     display: block; /* 블록으로 설정하여 세로로 쌓이도록 */
+    color: #0071e3;
+    text-decoration: none; /* 밑줄 제거 */
 }
-
 
 /****************************************************************/
 /* 마이페이지폼 **********************************************/
@@ -160,7 +158,6 @@
     margin: 50px auto;
 }
 
-
 #aside {
     float: left; 
     width: 120px; 
@@ -169,11 +166,11 @@
     padding-left: 50px;
 }
 
-#aside .aside-txt {
+#aside .DA-aside-txt {
     margin-top: 10px;
 }
 
-#aside .aside-txt span:nth-of-type(1) {
+#aside .DA-aside-txt span:nth-of-type(1) {
     margin-left: 10px;
     display: block;
     padding-top: 7px; 
@@ -181,7 +178,7 @@
     font-size: 20px;
 }
 
-#aside .aside-txt span:nth-of-type(2) {
+#aside .DA-aside-txt span:nth-of-type(2) {
     margin-left: 10px;
     display: block;
     padding-top: 7px; 
@@ -194,8 +191,7 @@
     margin-top: 70px;
 }
 
-
-#aside ul>li {
+#aside ul > li {
     font-weight: 250;
     margin: 5px 0px 0px 0px; 
     padding: 3px 0px 3px 10px; 
@@ -203,8 +199,6 @@
     text-align: left; 
     list-style-type: none;
 }
-
-
 
 #content-2 {
     float: left;
@@ -220,9 +214,8 @@
     font-weight: bold; 
 }
 
-
 /* 섹션마다 */
-.info-section {
+.DA-info-section {
     background-color: white;
     padding: 0px 20px;
     border: 1px solid #e0e0e0;
@@ -232,7 +225,8 @@
     height: 230px; /* max-height 3개의 카드만 보이도록 높이 제한 */
     overflow: hidden; /* 넘치는 부분 숨김 */
 }
-.favorite-section, .purchaseList-section {
+
+.DA-favorite-section, .DA-purchaseList-section {
     background-color: white;
     padding: 0px 20px;
     border: 1px solid #e0e0e0;
@@ -243,38 +237,38 @@
     overflow: hidden; /* 넘치는 부분 숨김 */
 }
 
-.info-header, .favorite-header, .purchaseList-header {
+.DA-info-header, .DA-favorite-header, .DA-purchaseList-header {
     display: flex;
     justify-content: space-between;
     padding-top: 0px;
     align-items: center;
 }
 
-.info-header #modal-btn {
+.DA-info-header #DA-modal-btn {
     border: none;
     background-color: white;
     font-size: 17px;
     cursor: pointer;
 }
 
-.info-header #modal-btn:hover {
+.DA-info-header #DA-modal-btn:hover {
     color: #0071e3;
 }
 
-.info-status {
-	background-color: #f7f7f7;
+.DA-info-status {
+    background-color: #f7f7f7;
     padding: 5px;
-	border-radius: 7px;
-	color: #727272;
+    border-radius: 7px;
+    color: #727272;
     margin-bottom: 10px;
 }
 
-.info-status p {
-	padding: 3px;
-	font-size: 15px;
+.DA-info-status p {
+    padding: 3px;
+    font-size: 15px;
 }
 
-.favorite-products, .purchaseList-products {
+.DA-favorite-products, .DA-purchaseList-products {
     display: grid; /* 그리드 설정 */
     gap: 10px; /* 간격 설정 */
     grid-template-columns: repeat(3, 1fr); /* 3개의 컬럼 설정 */
@@ -282,7 +276,7 @@
     /* grid-auto-rows: auto; 자동 높이 설정 */
 }
 
-.product-info, .purchaseList-info {
+.DA-product-info, .DA-purchaseList-info {
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     padding: 10px;
@@ -290,37 +284,34 @@
     transition: box-shadow 0.3s ease;
 }
 
-.product-info img , .purchaseList-info img {
+.DA-product-info img, .DA-purchaseList-info img {
     width: 100%;
     height: 150px;
     border-radius: 10px;
 }
 
-
-.product-details, .purchaseList-details {
+.DA-product-details, .DA-purchaseList-details {
     margin-top: 10px;
 }
 
-.product-details h4, .purchaseList-details h4 {
+.DA-product-details h4, .DA-purchaseList-details h4 {
     margin: 0;
     font-size: 14px;
 }
 
-.product-details p, .purchaseList-details p {
+.DA-product-details p, .DA-purchaseList-details p {
     margin: 5px 0;
     font-size: 12px;
     color: #666;
 }
 
-
-.purchaseList-section {
+.DA-purchaseList-section {
     margin-bottom: 50px;
 }
 
-
 /* 모달창 */
 /* 창 떴을때 뒤에 배경 */
-.modal-overlay {
+.DA-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -333,7 +324,7 @@
 }
 
 /* 모달창 전체 */
-.modal-content {
+.DA-modal-content {
     background: white;
     width: 600px;
     padding: 20px;
@@ -342,28 +333,33 @@
 }
 
 /* 모달창닫기버튼 */
-.modal-content button {
+.DA-modal-content button {
     background-color: white;
     border: none;
     font-size: 25px;
 }
 
-.modal-content #modalContent {
+.DA-modal-content button:hover {
+    cursor: pointer;
+    color: #0071e3;
+}
+
+.DA-modal-content #DA-modalContent {
     text-align: center;
 }
 
 /* 사람모양사진 */
-.modal-content #modalContent img {
+.DA-modal-content #DA-modalContent img {
     width: 50px;
 }
 
-.modal-content #modalContent p {
+.DA-modal-content #DA-modalContent p {
     font-size: 25px;
     margin: 0px;
     margin-bottom: 35px;
 }
 
-.modal-content #modalContent input {
+.DA-modal-content #DA-modalContent input {
     width: 250px;
     height: 40px;
     border-radius: 7px;
@@ -371,7 +367,7 @@
 }
 
 /* 수정버튼 */
-.modal-content #modalContent button {
+.DA-modal-content #DA-modalContent button {
     width: 80px;
     height: 30px;
     font-size: 17px;
@@ -379,10 +375,10 @@
     background-color: #0071e3;
     color: white;
 }
-.modal-content #modalContent button:hover {
+
+.DA-modal-content #DA-modalContent button:hover {
     background-color: #005bb5;
 }
-
 
 /****************************************************************/
 /* 구매내역폼 **********************************************/
@@ -402,71 +398,72 @@
     font-weight: bold; 
 }
 
-#content-3 #buy-none {
+#content-3 #DA-buy-none {
     margin-top: 110px;
     margin-bottom: 250px;
 }
 
-#content-3 #buy-none p {
+#content-3 #DA-buy-none p {
     line-height: 1.5;
 }
 
-#content-3 #buy-none p .buyLink {
+#content-3 #DA-buy-none p .DA-buyLink {
     color: #0071e3;
     text-decoration: none;
 }
 
-#content-3 #buy-none p .buyLink:visited {
+#content-3 #DA-buy-none p .DA-buyLink:visited {
     color: #0071e3;
     text-decoration: none;
 }
 
-#content-3 #buy-none p .buyLink:hover {
+#content-3 #DA-buy-none p .DA-buyLink:hover {
     color: #015ebb;
     text-decoration: none; /* 밑줄 제거 */
 }
 
-
 /* 구매물품있을때 */
-.purchaseList {
+.DA-purchaseList {
     background-color: white;
     padding: 0px 20px;
     border: 1px solid #e0e0e0;
     margin-top: 100px;
+    margin-bottom: 50px;
     border-radius: 10px;
 }
 
-.purchaseList .products {
-    padding-left: 20px;
+.DA-purchaseList .DA-products {
+    padding: 0px 20px;
+    margin-bottom: 40px;
 }
 
-.purchaseList .products .clearfix {
+.DA-purchaseList .DA-products .DA-clearfix {
     border: 1px solid #e7e7e7;
     border-radius: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.clearfix::after {
+.DA-clearfix::after {
     content: "";
     display: table;
     clear: both;
 }
 
-.purchaseList .products .clearfix img {
+.DA-purchaseList .DA-products .DA-clearfix img {
     float: left;
     margin: 20px 0px 20px 20px;
     width: 200px;
     height: 200px;
 }
 
-.purchaseList .products .clearfix .details {
+.DA-purchaseList .DA-products .DA-clearfix .DA-details {
     float: left;
     margin-top: 40px;
     margin-left: 90px;
 }
 
-.purchaseList .clearfix .details p {
+.DA-purchaseList .DA-clearfix .DA-details p {
     margin: 5px 0;
     font-size: 20px;
     color: #666;
